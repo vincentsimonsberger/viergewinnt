@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <title>Vier Gewinnt - Drag & Drop</title>
+  </head>
+  <body>
+    <div id="spiel_wrapper">
+      <!-- Soieler 1 Anzeige (Name, Spielstein etc.) -->
+      <div class="spieler">
+        <h1>Spieler 1</h1>
+        <h3>Dein Spielstein:</h3>
+        <div class="spielstein-info">
+          <div id="spielstein-rot" draggable="true">
+            <svg height="100" width="100">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="rot"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Hier ist das Spielbrett -->
+      <div id="spielfeld_wrapper">
+        <div id="spiel_info">
+          <h2>Hier werden aktuelle Spielereignisse ausgegeben!</h2>
+          <button id="neustartbutton">Neustart</button>
+        </div>
+        <div id="spielfeld">
+          <div class="column" id="column-0" data-spalte="0">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-1" data-spalte="1">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-2" data-spalte="2">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-3" data-spalte="3">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-4" data-spalte="4">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-5" data-spalte="5">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+          <div class="column" id="column-6" data-spalte="6">
+            <svg height="100" width="100" class="row-5">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-4">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-3">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-2">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-1">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+            <svg height="100" width="100" class="row-0">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="frei"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Spieler 2 Anzeige (Name, Spielstein, etc) -->
+      <div class="spieler">
+        <h1>Spieler 2</h1>
+        <h3>Dein Spielstein:</h3>
+        <div class="spielstein-info">
+          <div id="spielstein-gelb" draggable="true">
+            <svg height="100" width="100">
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="#0B4E72"
+                stroke-width="3"
+                class="gelb"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer type="module" src="./js/game.js"></script>
+  </body>
+</html>
